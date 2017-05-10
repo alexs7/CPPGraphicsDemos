@@ -43,6 +43,10 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
+static void close_callback(GLFWwindow* window){
+    std::cout << "Closed";
+}
+
 int main(void){
   GLFWwindow* window;
   GLuint vertex_buffer, vertex_shader, fragment_shader, program;
@@ -64,6 +68,7 @@ int main(void){
   }
   
   glfwSetKeyCallback(window, key_callback);
+  glfwSetWindowCloseCallback(window, close_callback);
   glfwMakeContextCurrent(window);
   
   gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
