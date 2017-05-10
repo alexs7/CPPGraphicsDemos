@@ -56,7 +56,7 @@ int main(void){
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
   
-  window = glfwCreateWindow(600, 480, "First Graphics Program", NULL, NULL);
+  window = glfwCreateWindow(640, 480, "My Title", NULL, NULL);
   
   if(!window){
       glfwTerminate();
